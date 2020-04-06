@@ -1,6 +1,5 @@
 # A Pronunciation Dictionary App
 * **Objective**
-		console.log('test passed = ' + pass);
 	* to implement a swype-keyboard texting algorithm
 * **Purpose**
 	* to test algorithmic thinking
