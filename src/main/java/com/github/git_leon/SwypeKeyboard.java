@@ -10,9 +10,19 @@ import java.util.List;
  * @created 04/06/2020 - 4:24 PM
  */
 public class SwypeKeyboard {
+    private List<String> dictionary;
+
+    public SwypeKeyboard() {
+        this(CMUDictionary.DICTIONARY.getWordList());
+    }
+
+    public SwypeKeyboard(List<String> dictionary) {
+        this.dictionary = dictionary;
+    }
+
     public List<String> getSuggestedWords(String input) {
         List<String> result = new ArrayList<>();
-        for (String dictionaryEntry : CMUDictionary.DICTIONARY.getWordList()) {
+        for (String dictionaryEntry : this.dictionary) {
             // ensure that the input occur in the order that dictionaryEntry occur in
             if (occursInOrder(input, dictionaryEntry)) {
                 result.add(dictionaryEntry);
