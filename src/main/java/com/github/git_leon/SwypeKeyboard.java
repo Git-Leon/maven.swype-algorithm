@@ -35,8 +35,9 @@ public class SwypeKeyboard {
     // ensure characters in input occur in the order dictionaryEntry
     private Boolean occursInOrder(String input, String dictionaryEntry) { // TODO
         String[] path = input.split("");
+        String[] dictionaryEntryCharacters = dictionaryEntry.split("");
         for (int i = 0; i < dictionaryEntry.length(); i++) {
-            String dictionaryEntryCharacter = dictionaryEntry.split("")[i];
+            String dictionaryEntryCharacter = dictionaryEntryCharacters[i];
             for (int j = i; j < path.length; j++) {
                 String pathChar = path[j];
                 if (dictionaryEntryCharacter == pathChar) {
