@@ -1,27 +1,18 @@
-package com.github.perschola;
+package com.github.git_leon;
 
-import com.github.perschola.dictionary.CMUDictionary;
-import com.github.perschola.dictionary.Word;
+import com.github.git_leon.dictionary.CMUDictionary;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author leonhunter
  * @created 04/06/2020 - 4:24 PM
  */
 public class SwypeKeyboard {
-    private static final List<String> dictionary = CMUDictionary
-            .DICTIONARY
-            .getWordList()
-            .stream()
-            .map(Word::getSpelling)
-            .collect(Collectors.toList());
-
     public List<String> getSuggestedWords(String input) {
         List<String> result = new ArrayList<>();
-        for (String dictionaryEntry : dictionary) {
+        for (String dictionaryEntry : CMUDictionary.DICTIONARY.getWordList()) {
             // ensure that the input occur in the order that dictionaryEntry occur in
             if (occursInOrder(input, dictionaryEntry)) {
                 result.add(dictionaryEntry);

@@ -1,4 +1,4 @@
-package com.github.perschola;
+package com.github.git_leon;
 
 import org.junit.Assert;
 import org.junit.Test;
