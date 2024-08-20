@@ -1,4 +1,4 @@
-# A Pronunciation Dictionary App
+# Swype text algorithm
 * **Objective**
 	* to implement a swype-keyboard texting algorithm
 * **Purpose**
